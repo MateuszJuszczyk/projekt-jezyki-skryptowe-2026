@@ -1,5 +1,5 @@
 # Projekt: System Rezerwacji Noclegów (Klient-Serwer)
-
+https://mateuszjuszczyk.github.io/projekt-jezyki-skryptowe-2026/fake-booking/client/
 ## Podział prac
 
 ### Osoba A: Frontend (Klient)
