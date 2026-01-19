@@ -1,61 +1,196 @@
 :root {
-    --primary: #003580;
-    --accent: #febb02;
-    --btn-hover: #005999;
+  --primary: #003580;
+  --accent: #febb02;
+  --bg: #f5f5f5;
 }
 
-body { margin: 0; font-family: 'BlinkMacSystemFont', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f5f5f5; }
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg);
+}
 
-/* NAV */
-.navbar { background-color: var(--primary); padding: 15px 0; color: white; }
-.nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 24px; font-weight: 700; color: white; text-decoration: none; }
-.nav-buttons button { margin-left: 5px; padding: 5px 10px; cursor: pointer; border: 1px solid transparent; }
-.btn-trans { background: transparent; color: white; }
-.btn-light { background: white; color: var(--primary); font-weight: 600; border-radius: 2px; }
+/* Nav */
+.navbar {
+  background-color: var(--primary);
+  padding: 15px 0;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn-light {
+  background: white;
+  color: var(--primary);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-trans {
+  background: transparent;
+  color: white;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
 
-/* HERO */
-.hero-header { background-color: var(--primary); color: white; padding-bottom: 60px; position: relative; margin-bottom: 40px; }
-.hero-content { max-width: 1100px; margin: 0 auto; padding: 30px 20px 60px 20px; }
-.hero-content h1 { font-size: 48px; margin: 0 0 10px 0; }
+/* Hero */
+.hero-header {
+  background-color: var(--primary);
+  color: white;
+  padding-bottom: 60px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+.hero-content h1 {
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
 
-/* SEARCH BAR */
+/* Search Bar */
 .search-bar-container {
-    background-color: var(--accent);
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4px;
-    border-radius: 4px;
-    display: flex;
-    gap: 4px;
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background-color: var(--accent);
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-item { background: white; flex: 1; display: flex; align-items: center; padding: 0 10px; border-radius: 2px; }
-.search-item i { color: #555; margin-right: 10px; }
-.search-item select, .search-item input { border: none; width: 100%; height: 48px; font-size: 14px; outline: none; }
-.search-btn { background-color: #0071c2; color: white; font-size: 20px; font-weight: 500; border: none; padding: 0 20px; cursor: pointer; }
-.search-btn:hover { background-color: var(--btn-hover); }
+.search-item {
+  background: white;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.search-item select,
+.search-item input {
+  border: none;
+  width: 100%;
+  height: 48px;
+  outline: none;
+  font-size: 15px;
+}
+.search-btn {
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  padding: 0 24px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search-btn:hover {
+  background-color: #005999;
+}
 
-/* LISTA OFERT */
-.main-container { max-width: 1100px; margin: 60px auto 20px; padding: 0 20px; }
-.offer-card { background: white; border: 1px solid #e7e7e7; border-radius: 8px; display: flex; margin-bottom: 20px; padding: 16px; gap: 20px; }
-.offer-image { width: 240px; height: 200px; object-fit: cover; border-radius: 8px; }
-.offer-details { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-.offer-title { color: #0071c2; margin: 0; font-size: 20px; }
-.price-tag { font-size: 24px; font-weight: 700; text-align: right; }
-.map-link { color: #0071c2; text-decoration: underline; cursor: pointer; font-size: 13px; }
+/* Oferty */
+.main-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.offer-card {
+  background: white;
+  border: 1px solid #ddd;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 15px;
+  gap: 20px;
+  border-radius: 8px;
+}
+.offer-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.offer-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.offer-title {
+  color: #0071c2;
+  margin: 0;
+}
+.price-tag {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right;
+}
+.map-link {
+  color: #0071c2;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+}
 
-/* MODAL */
-.hidden { display: none !important; }
-.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 99; }
-.modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 25px; width: 400px; border-radius: 8px; z-index: 100; }
-.modal h3 { margin-top: 0; }
-.modal input { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
-.submit-btn { width: 100%; background: #0071c2; color: white; padding: 12px; border: none; font-size: 16px; font-weight: bold; cursor: pointer; }
-.close-modal { float: right; cursor: pointer; font-size: 24px; }
+/* Modal */
+.hidden {
+  display: none !important;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  width: 400px;
+  z-index: 100;
+  border-radius: 8px;
+}
+.close-modal {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+}
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+.submit-btn {
+  width: 100%;
+  background: #0071c2;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}

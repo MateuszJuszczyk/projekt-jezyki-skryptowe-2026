@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goonking.com | Najlepsze noclegi w wariackich cenach</title>
+    <title>Goonking.com</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -14,8 +16,6 @@
             <a href="#" class="logo">Goonking.com</a>
             <div class="nav-buttons">
                 <button class="btn-trans">PLN</button>
-                <button class="btn-trans"><i class="fa-solid fa-circle-question"></i></button>
-                <button class="btn-light">Udostępnij obiekt</button>
                 <button class="btn-light">Zaloguj się</button>
             </div>
         </div>
@@ -47,15 +47,14 @@
             </div>
             <div class="search-item">
                 <i class="fa-solid fa-user"></i>
-                <input type="number" placeholder="2 dorosłych" min="1">
+                <input type="number" value="2" min="1" placeholder="Osób">
             </div>
             <button class="search-btn" onclick="handleSearch()">Szukaj</button>
         </div>
     </header>
 
     <main class="main-container">
-        <div id="offers-container">
-            </div>
+        <div id="offers-container"></div>
     </main>
 
     <div id="modal-overlay" class="overlay hidden" onclick="closeModal()"></div>
@@ -67,20 +66,11 @@
         <div class="modal-body">
             <label>Twoje dane</label>
             <input type="text" id="user-name" placeholder="Imię i nazwisko" required>
-            
-            <div class="date-group">
-                <div>
-                    <label>Zameldowanie</label>
-                    <input type="date" id="date-from" readonly>
-                </div>
-                <div>
-                    <label>Wymeldowanie</label>
-                    <input type="date" id="date-to" readonly>
-                </div>
-            </div>
 
-            <div class="price-summary">
-                <p>Do zapłaty na miejscu: <span id="modal-price" style="font-weight:bold; font-size:1.2em;">0 PLN</span></p>
+            <div class="date-group">
+                <label>Termin:</label>
+                <input type="date" id="date-from" readonly>
+                <input type="date" id="date-to" readonly>
             </div>
 
             <button id="confirm-booking-btn" class="submit-btn">Finalizuj rezerwację</button>
@@ -89,4 +79,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
