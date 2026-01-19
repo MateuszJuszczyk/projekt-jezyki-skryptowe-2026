@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="search-section">
+        <select id="city-select">
+            <option value="Gdańsk">Gdańsk</option>
+            <option value="Warszawa">Warszawa</option>
+            <option value="Zakopane">Zakopane</option>
+        </select>
+        <button onclick="handleSearch()">Szukaj</button>
+    </section>
+
+    <div id="offers-container"></div>
+
+    <div id="booking-modal" style="display:none;">
+        <h3>Rezerwacja</h3>
+        <input type="text" id="user-name" placeholder="Imię i nazwisko" required>
+        <input type="date" id="date-from" required>
+        <input type="date" id="date-to" required>
+        <button id="confirm-booking-btn">Zatwierdź rezerwację</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
